@@ -1,0 +1,19 @@
+# Netlify Deployment Configuration
+# Deploy dashboard to: https://luna-agents-testing.netlify.app
+
+[build]
+  publish = "."
+  command = "echo 'No build required - static HTML'"
+
+[[redirects]]
+  from = "/"
+  to = "/testing-dashboard.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "no-referrer-when-downgrade"

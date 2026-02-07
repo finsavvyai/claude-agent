@@ -1,0 +1,53 @@
+{
+  "name": "@claude-agent/api",
+  "version": "1.0.0",
+  "description": "RAG API with Cloudflare Workers deployment support",
+  "main": "src/worker.ts",
+  "scripts": {
+    "dev": "npm run build && wrangler dev",
+    "build": "tsc",
+    "deploy": "wrangler deploy",
+    "deploy:prod": "wrangler deploy --env production",
+    "deploy:staging": "wrangler deploy --env staging",
+    "start": "wrangler dev",
+    "test": "npm test",
+    "test:watch": "npm run test --watch",
+    "test:coverage": "npm run test --coverage"
+  },
+  "dependencies": {
+    "hono": "^4.0.0",
+    "openai": "^4.0.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20231030.0",
+    "typescript": "^5.0.0",
+    "wrangler": "^3.0.0",
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "prettier": "^3.0.0",
+    "vitest": "^1.0.0",
+    "tsx": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "rag",
+    "retrieval-augmented-generation",
+    "cloudflare",
+    "workers",
+    "serverless",
+    "edge-computing",
+    "vector-search",
+    "ai",
+    "claude-code"
+  ],
+  "author": "Shachar Solomon",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/infofinsavvy/focusvault-server.git"
+  }
+}

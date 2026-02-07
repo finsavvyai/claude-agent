@@ -1,0 +1,85 @@
+# Branch Protection Rules Configuration
+# This file defines the branch protection rules for the repository
+
+# Main branch protection
+main:
+  # Required status checks
+  required_status_checks:
+    strict: true  # Require status checks to pass on PRs targeting main branch
+    contexts:
+      - "ci/ci workflow"  # Main CI workflow
+      - "security/security-scan"  # Security vulnerability scan
+      - "code-quality/code-quality-check"  # Code quality checks
+      - "tests/unit-tests"  # Unit tests
+      - "tests/integration-tests"  # Integration tests
+      - "lint/eslint-check"  # ESLint checks
+      - "lint/prettier-check"  # Prettier formatting checks
+      - "type-check/typescript-check"  # TypeScript type checking
+      - "build/build-check"  # Build verification
+
+  # Enforce administrators
+  enforce_admins: true
+
+  # Required pull request reviews
+  required_pull_request_reviews:
+    required_approving_review_count: 2  # Require 2 approvals
+    dismiss_stale_reviews: true  # Dismiss approvals when new commits are pushed
+    require_code_owner_reviews: true  # Require review from code owners
+    require_last_push_approval: true  # Require approval for most recent push
+    dismissal_restrictions:
+      users: []
+      teams: ["maintainers"]
+    bypass_pull_request_allowances:
+      users: []
+      teams: ["maintainers"]
+
+  # Restrictions
+  restrictions:
+    users: []
+    teams: ["maintainers", "core-team"]
+
+  # Prevent force pushes
+  allow_force_pushes: false
+  allow_deletions: false
+
+# Development branch protection
+develop:
+  required_status_checks:
+    strict: false  # Allow merges from branches that are up to date
+    contexts:
+      - "ci/ci workflow"
+      - "tests/unit-tests"
+      - "lint/eslint-check"
+      - "lint/prettier-check"
+      - "type-check/typescript-check"
+
+  enforce_admins: false
+
+  required_pull_request_reviews:
+    required_approving_review_count: 1
+    dismiss_stale_reviews: false
+    require_code_owner_reviews: false
+
+  restrictions:
+    users: []
+    teams: ["core-team"]
+
+  allow_force_pushes: true
+  allow_deletions: false
+
+# Feature branch protection (optional, for critical feature branches)
+feature/*:
+  required_status_checks:
+    strict: false
+    contexts:
+      - "ci/ci workflow"
+      - "tests/unit-tests"
+      - "lint/eslint-check"
+
+  enforce_admins: false
+
+  required_pull_request_reviews:
+    required_approving_review_count: 1
+
+  allow_force_pushes: true
+  allow_deletions: true

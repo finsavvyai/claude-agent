@@ -1,0 +1,159 @@
+# Elasticsearch Configuration for Claude Agent Platform
+# Development environment settings
+
+cluster.name: claude-agent-cluster
+node.name: elasticsearch
+
+# Network Settings
+network.host: 0.0.0.0
+http.port: 9200
+transport.port: 9300
+
+# Discovery Settings
+discovery.type: single-node
+
+# Memory Settings
+bootstrap.memory_lock: true
+
+# Paths
+path.data: /usr/share/elasticsearch/data
+path.logs: /usr/share/elasticsearch/logs
+path.repo: /usr/share/elasticsearch/backup
+
+# Security Settings
+xpack.security.enabled: false
+xpack.security.enrollment.enabled: false
+xpack.security.http.ssl.enabled: false
+xpack.security.transport.ssl.enabled: false
+
+# Monitoring Settings
+xpack.monitoring.collection.enabled: true
+xpack.monitoring.collection.interval: 10s
+
+# Performance Settings
+cluster.routing.allocation.disk.threshold_enabled: true
+cluster.routing.allocation.disk.watermark.low: 85%
+cluster.routing.allocation.disk.watermark.high: 90%
+cluster.routing.allocation.disk.watermark.flood_stage: 95%
+
+# Index Settings
+action.auto_create_index: true
+action.destructive_requires_name: true
+
+# Thread Pool Settings
+thread_pool.write.queue_size: 1000
+thread_pool.search.queue_size: 1000
+
+# HTTP Settings
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+http.cors.allow-headers: "X-Requested-With,Content-Type,Content-Length,Authorization"
+http.max_content_length: 100mb
+
+# Script Settings
+script.max_compilations_rate: 50/1m
+script.inline: true
+script.stored: true
+script.file: true
+
+# Index Lifecycle Management (ILM)
+xpack.ilm.enabled: true
+
+# Index Template Management
+xpack.index_template_management.enabled: true
+
+# Machine Learning (disabled for development)
+xpack.ml.enabled: false
+
+# SQL Support
+xpack.sql.enabled: true
+
+# Rollup Jobs
+xpack.rollup.enabled: false
+
+# Canvas
+xpack.canvas.enabled: true
+
+# Reporting
+xpack.reporting.enabled: false
+
+# Maps
+xpack.maps.enabled: false
+
+# Graph
+xpack.graph.enabled: false
+
+# APM
+xpack.apm.enabled: false
+
+# Infrastructure
+xpack.infra.enabled: false
+
+# Logstash Management
+xpack.logstash.enabled: false
+
+# Watcher (disabled for development)
+xpack.watcher.enabled: false
+
+# Transform
+xpack.transform.enabled: false
+
+# Enrich
+xpack.enrich.enabled: true
+
+# Analytics
+xpack.analytics.enabled: true
+
+# Fleet
+xpack.fleet.enabled: false
+
+# Security Token Service
+xpack.security.authc.token.enabled: false
+
+# API Key Service
+xpack.security.authc.api_key.enabled: false
+
+# Cross-Cluster Search
+xpack.search.remote.enabled: false
+
+# Snapshot and Restore
+path.repo: ["/usr/share/elasticsearch/backup"]
+xpack.snapshot.enabled: false
+
+# Groovy Scripting (deprecated)
+script.groovy.sandbox.enabled: false
+
+# Index Settings for Claude Agent Platform
+index.number_of_shards: 1
+index.number_of_replicas: 0
+index.refresh_interval: 1s
+index.max_result_window: 50000
+
+# Merge Settings
+indices.memory.index_buffer_size: 10%
+indices.queries.cache.size: 5%
+indices.fielddata.cache.size: 40%
+
+# Circuit Breaker Settings
+indices.breaker.total.limit: 70%
+indices.breaker.total.use_real_memory: true
+indices.breaker.fielddata.limit: 40%
+indices.breaker.fielddata.overhead: 1.03
+indices.breaker.request.limit: 60%
+indices.breaker.request.overhead: 1
+
+# Search Settings
+search.max_buckets: 10000
+search.max_open_scroll_context: 1000
+
+# Reindex Settings
+reindex.remote.whitelist: []
+
+# Geo Settings
+# No specific geo settings for development
+
+# Development Optimizations
+logger.level: INFO
+
+# Custom index templates for Claude Agent Platform
+# These will be created programmatically via API

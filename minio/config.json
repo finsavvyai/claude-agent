@@ -1,0 +1,29 @@
+{
+  "version": "33",
+  "credential": {
+    "accessKey": "claude_user",
+    "secretKey": "claude_password",
+    "expiration": "2025-01-01T00:00:00Z",
+    "sessionToken": ""
+  },
+  "region": "us-east-1",
+  "browser": "on",
+  "logger": {
+    "console": {
+      "enable": true
+    },
+    "file": {
+      "enable": false,
+      "fileName": "",
+      "fileSize": 10485760
+    }
+  },
+  "notify": {
+    "webhook": {
+      "1": {
+        "enable": false,
+        "endpoint": ""
+      }
+    }
+  }
+}

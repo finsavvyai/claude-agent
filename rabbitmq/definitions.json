@@ -1,0 +1,119 @@
+{
+  "users": [
+    {
+      "name": "claude_user",
+      "password": "claude_password",
+      "tags": "administrator"
+    }
+  ],
+  "vhosts": [
+    {
+      "name": "claude_vhost"
+    }
+  ],
+  "permissions": [
+    {
+      "user": "claude_user",
+      "vhost": "claude_vhost",
+      "configure": ".*",
+      "write": ".*",
+      "read": ".*"
+    }
+  ],
+  "queues": [
+    {
+      "name": "agent.tasks",
+      "vhost": "claude_vhost",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-message-ttl": 3600000,
+        "x-max-length": 10000
+      }
+    },
+    {
+      "name": "workflows.execution",
+      "vhost": "claude_vhost",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-message-ttl": 7200000,
+        "x-max-length": 5000
+      }
+    },
+    {
+      "name": "rag.processing",
+      "vhost": "claude_vhost",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-message-ttl": 1800000,
+        "x-max-length": 20000
+      }
+    },
+    {
+      "name": "notifications.email",
+      "vhost": "claude_vhost",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-message-ttl": 86400000,
+        "x-max-length": 50000
+      }
+    }
+  ],
+  "exchanges": [
+    {
+      "name": "claude.events",
+      "vhost": "claude_vhost",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "claude.direct",
+      "vhost": "claude_vhost",
+      "type": "direct",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    }
+  ],
+  "bindings": [
+    {
+      "source": "claude.events",
+      "vhost": "claude_vhost",
+      "destination": "agent.tasks",
+      "destination_type": "queue",
+      "routing_key": "agent.task.*",
+      "arguments": {}
+    },
+    {
+      "source": "claude.events",
+      "vhost": "claude_vhost",
+      "destination": "workflows.execution",
+      "destination_type": "queue",
+      "routing_key": "workflow.*",
+      "arguments": {}
+    },
+    {
+      "source": "claude.events",
+      "vhost": "claude_vhost",
+      "destination": "rag.processing",
+      "destination_type": "queue",
+      "routing_key": "rag.*",
+      "arguments": {}
+    },
+    {
+      "source": "claude.events",
+      "vhost": "claude_vhost",
+      "destination": "notifications.email",
+      "destination_type": "queue",
+      "routing_key": "notification.email",
+      "arguments": {}
+    }
+  ]
+}

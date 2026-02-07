@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luna Agents - Stop Wasting 3 Hours Searching Code. Get Answers in 30 Seconds.</title>
+    <meta name="description" content="Luna Agents: Google + ChatGPT for your codebase. 300x faster than manual search. 6,900% ROI. Start free.">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Luna Agents - Instant AI Code Search">
+    <meta property="og:description" content="Stop wasting 3 hours searching code. Get answers in 30 seconds. 300x faster, 6,900% ROI.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://luna-agents.dev">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'luna-purple': '#7C3AED',
+                        'luna-orange': '#F97316',
+                        'luna-dark': '#0F172A',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</head>
+
+<body class="bg-white text-gray-900 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-200 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold bg-gradient-to-r from-luna-purple to-luna-orange bg-clip-text text-transparent">
+                        Luna Agents
+                    </span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-gray-900 transition">Features</a>
+                    <a href="#pricing" class="text-gray-600 hover:text-gray-900 transition">Pricing</a>
+                    <a href="#faq" class="text-gray-600 hover:text-gray-900 transition">FAQ</a>
+                    <a href="https://docs.luna-agents.dev" class="text-gray-600 hover:text-gray-900 transition">Docs</a>
+                    <a href="#waitlist" class="bg-luna-orange text-white px-6 py-2 rounded-lg font-semibold hover:bg-orange-600 transition">
+                        Start Free Trial
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-orange-50">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="inline-flex items-center px-4 py-2 bg-orange-100 rounded-full text-sm font-semibold text-orange-800 mb-8">
+                🔥 Join 1,247 developers in early access
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6">
+                <span class="block">Stop Wasting 3 Hours</span>
+                <span class="block">Searching Code.</span>
+                <span class="block bg-gradient-to-r from-luna-purple to-luna-orange bg-clip-text text-transparent">
+                    Get Answers in 30 Seconds.
+                </span>
+            </h1>
+
+            <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Luna Agents: <span class="font-semibold text-gray-900">Google + ChatGPT for your codebase</span>.<br>
+                300x faster than manual search. 6,900% ROI.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <a href="#waitlist" class="bg-luna-orange text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-orange-600 transition transform hover:scale-105 shadow-lg">
+                    Start Free Trial →
+                </a>
+                <a href="#demo" class="bg-white text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-50 transition border-2 border-gray-300">
+                    Watch 2-Min Demo
+                </a>
+            </div>
+
+            <!-- Hero Visual Placeholder -->
+            <div class="relative max-w-5xl mx-auto mt-16">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- BEFORE -->
+                    <div class="bg-red-50 border-2 border-red-200 rounded-xl p-6">
+                        <div class="text-red-700 font-bold text-lg mb-4">🔴 BEFORE Luna</div>
+                        <div class="space-y-3 text-left">
+                            <div class="flex items-center text-gray-700">
+                                <span class="mr-3">📂</span>
+                                <span>Open 12 browser tabs</span>
+                            </div>
+                            <div class="flex items-center text-gray-700">
+                                <span class="mr-3">🔍</span>
+                                <span>Search 5 GitHub repos</span>
+                            </div>
+                            <div class="flex items-center text-gray-700">
+                                <span class="mr-3">📖</span>
+                                <span>Read 3,000 lines of code</span>
+                            </div>
+                            <div class="flex items-center text-gray-700">
+                                <span class="mr-3">💬</span>
+                                <span>Ask 2 teammates</span>
+                            </div>
+                            <div class="border-t-2 border-red-200 pt-3 mt-4">
+                                <div class="text-2xl font-bold text-red-700">⏱️ 2.5 hours</div>
+                                <div class="text-sm text-red-600">$212.50 cost</div>
+                                <div class="text-sm text-red-600">😫 High frustration</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AFTER -->
+                    <div class="bg-green-50 border-2 border-green-200 rounded-xl p-6">
+                        <div class="text-green-700 font-bold text-lg mb-4">🟢 AFTER Luna</div>
+                        <div class="space-y-3 text-left">
+                            <div class="flex items-center text-gray-700">
+                                <span class="mr-3">🤖</span>
+                                <span>Ask Luna your question</span>
+                            </div>
+                            <div class="flex items-center text-gray-700">
+                                <span class="mr-3">⚡</span>
+                                <span>AI searches entire codebase</span>
+                            </div>
+                            <div class="flex items-center text-gray-700">
+                                <span class="mr-3">💡</span>
+                                <span>Get instant answer + code</span>
+                            </div>
+                            <div class="flex items-center text-gray-700">
+                                <span class="mr-3">✅</span>
+                                <span>Continue building</span>
+                            </div>
+                            <div class="border-t-2 border-green-200 pt-3 mt-4">
+                                <div class="text-2xl font-bold text-green-700">⚡ 30 seconds</div>
+                                <div class="text-sm text-green-600">$0.71 cost</div>
+                                <div class="text-sm text-green-600">😊 Flow maintained</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-gradient-to-r from-luna-purple to-luna-orange text-white px-8 py-4 rounded-lg inline-block font-bold text-xl">
+                    💡 Savings: $211.79 per query | 300x faster
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    Developers Waste 40% of Their Day<br>Searching Code
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    That's <span class="font-bold text-red-600">$1.2 trillion lost globally</span> in productivity every year.
+                </p>
+            </div>
+
+            <div class="bg-gray-50 rounded-2xl p-8 md:p-12">
+                <div class="prose prose-lg max-w-none">
+                    <h3 class="text-2xl font-bold mb-4">Meet Sarah</h3>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                        Sarah is a product manager at a Series B fintech startup. Every time she needs to understand
+                        how a feature works, she embarks on a 2.5-hour journey:
+                    </p>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start">
+                            <span class="text-3xl mr-4">⏰</span>
+                            <div>
+                                <div class="font-semibold text-lg">Hour 1: The Search Begins</div>
+                                <div class="text-gray-600">Opens GitHub, searches 5 repositories, finds 3 different implementations. Confused: Which one is current?</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <span class="text-3xl mr-4">📚</span>
+                            <div>
+                                <div class="font-semibold text-lg">Hour 2: The Documentation Dive</div>
+                                <div class="text-gray-600">Checks Confluence (outdated), reads internal docs (missing details), searches Slack history (2,000 messages about "auth").</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <span class="text-3xl mr-4">💬</span>
+                            <div>
+                                <div class="font-semibold text-lg">Hour 3: The Human Interruption</div>
+                                <div class="text-gray-600">Pings @sarah-backend-lead, waits 45 minutes (she's in deep work), gets partial answer, needs to ping @mike-security. Finally pieces together complete answer.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded">
+                        <div class="font-bold text-xl mb-2">Total Cost</div>
+                        <div class="text-gray-800">
+                            <div>⏱️ Time: <span class="font-bold">2.5 hours</span></div>
+                            <div>💰 Cost: <span class="font-bold">$212.50</span> (developer time)</div>
+                            <div>😫 Emotional State: Exhausted, frustrated</div>
+                            <div class="mt-4 text-lg font-semibold text-red-700">
+                                💡 This happens 5-10 times per day, per developer.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Solution Section -->
+    <section id="demo" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-blue-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    Ask Luna.<br>Get Instant Answers.
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Same question. 30 seconds. Zero interruptions.
+                </p>
+            </div>
+
+            <!-- Interactive Demo Mockup -->
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden max-w-4xl mx-auto">
+                <div class="bg-gradient-to-r from-luna-purple to-luna-orange p-4 text-white font-semibold">
+                    Luna Agents Demo
+                </div>
+                <div class="p-8">
+                    <div class="mb-6">
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">
+                            Try asking Luna:
+                        </label>
+                        <input
+                            type="text"
+                            placeholder="How does our authentication system work?"
+                            class="w-full px-6 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-luna-purple focus:outline-none"
+                        >
+                    </div>
+
+                    <div class="bg-gray-50 rounded-lg p-6 border-2 border-gray-200">
+                        <div class="flex items-start mb-4">
+                            <div class="w-10 h-10 bg-gradient-to-r from-luna-purple to-luna-orange rounded-full flex items-center justify-center text-white font-bold mr-3 flex-shrink-0">
+                                L
+                            </div>
+                            <div class="flex-1">
+                                <div class="font-semibold mb-2">Luna's Answer (30 seconds):</div>
+                                <div class="text-gray-700 space-y-2">
+                                    <p>Your authentication system uses JWT tokens with refresh token rotation. Here's how it works:</p>
+                                    <div class="bg-gray-800 text-green-400 p-4 rounded font-mono text-sm overflow-x-auto">
+                                        <div>// From backend/src/auth.js:42</div>
+                                        <div>async function verifyToken(token) {</div>
+                                        <div>&nbsp;&nbsp;const decoded = jwt.verify(token, SECRET);</div>
+                                        <div>&nbsp;&nbsp;return await User.findById(decoded.userId);</div>
+                                        <div>}</div>
+                                    </div>
+                                    <p class="text-sm text-gray-600">
+                                        📁 Related files: <span class="text-luna-purple">auth.js, middleware.js, user.model.js</span><br>
+                                        📚 Documentation: <span class="text-luna-purple">docs/authentication.md</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#waitlist" class="inline-block bg-luna-orange text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-orange-600 transition transform hover:scale-105 shadow-lg">
+                    Try Luna Free →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    Built for Enterprise.<br>Loved by Developers.
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-2xl">
+                    <div class="text-5xl mb-4">🔍</div>
+                    <h3 class="text-2xl font-bold mb-4">Universal Search</h3>
+                    <p class="text-gray-700">
+                        Instant answers from your entire codebase. No more hunting through files or grepping manually.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl">
+                    <div class="text-5xl mb-4">🤖</div>
+                    <h3 class="text-2xl font-bold mb-4">10 Specialized Agents</h3>
+                    <p class="text-gray-700">
+                        Each agent optimized for specific tasks: code search, security auditing, test generation, documentation.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl">
+                    <div class="text-5xl mb-4">🔒</div>
+                    <h3 class="text-2xl font-bold mb-4">Enterprise Security</h3>
+                    <p class="text-gray-700">
+                        SOC 2 ready. On-premise deployment available. Your code never leaves your infrastructure.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Additional Features -->
+            <div class="grid md:grid-cols-2 gap-6 mt-12">
+                <div class="flex items-start">
+                    <div class="text-2xl mr-4">⚡</div>
+                    <div>
+                        <div class="font-semibold text-lg">Edge Deployment</div>
+                        <div class="text-gray-600"><50ms latency worldwide. Cloudflare Workers.</div>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="text-2xl mr-4">🔄</div>
+                    <div>
+                        <div class="font-semibold text-lg">Real-Time Updates</div>
+                        <div class="text-gray-600">Auto-indexes on every git push. Always current.</div>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="text-2xl mr-4">🔗</div>
+                    <div>
+                        <div class="font-semibold text-lg">Integrations</div>
+                        <div class="text-gray-600">GitHub, GitLab, Bitbucket, Slack, VS Code.</div>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="text-2xl mr-4">📊</div>
+                    <div>
+                        <div class="font-semibold text-lg">Team Analytics</div>
+                        <div class="text-gray-600">Track productivity gains. Measure ROI.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    Start Free. Upgrade Anytime.
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Save $2,000/month in productivity for $29/month = 6,900% ROI
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Free Tier -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-gray-200">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold mb-2">Free</h3>
+                        <div class="text-4xl font-bold mb-2">$0</div>
+                        <div class="text-gray-600">per month</div>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>100 queries/month</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>3 projects</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Basic agents</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Community support</span>
+                        </li>
+                    </ul>
+                    <a href="#waitlist" class="block w-full text-center bg-gray-200 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition">
+                        Start Free
+                    </a>
+                </div>
+
+                <!-- Pro Tier -->
+                <div class="bg-gradient-to-br from-luna-purple to-luna-orange text-white rounded-2xl p-8 shadow-2xl transform scale-105 relative">
+                    <div class="absolute top-0 right-0 bg-yellow-400 text-gray-900 px-4 py-1 rounded-bl-lg rounded-tr-lg font-bold text-sm">
+                        🔥 MOST POPULAR
+                    </div>
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold mb-2">Pro</h3>
+                        <div class="text-4xl font-bold mb-2">$29</div>
+                        <div class="text-purple-100">per month</div>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <span class="mr-2">✓</span>
+                            <span>1,000 queries/month</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2">✓</span>
+                            <span>Unlimited projects</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2">✓</span>
+                            <span>All 10 AI agents</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2">✓</span>
+                            <span>API access</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2">✓</span>
+                            <span>Priority support</span>
+                        </li>
+                    </ul>
+                    <a href="#waitlist" class="block w-full text-center bg-white text-luna-purple px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition">
+                        Start Free Trial →
+                    </a>
+                </div>
+
+                <!-- Team Tier -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-gray-200">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold mb-2">Team</h3>
+                        <div class="text-4xl font-bold mb-2">$99</div>
+                        <div class="text-gray-600">per seat/month</div>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>10,000 queries/month</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Team collaboration</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>SSO & integrations</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Custom workflows</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Dedicated support</span>
+                        </li>
+                    </ul>
+                    <a href="#waitlist" class="block w-full text-center bg-luna-purple text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition">
+                        Book Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    Frequently Asked Questions
+                </h2>
+            </div>
+
+            <div class="space-y-6">
+                <details class="bg-gray-50 rounded-lg p-6 cursor-pointer">
+                    <summary class="font-bold text-xl">Is my code secure?</summary>
+                    <p class="mt-4 text-gray-700">
+                        Yes. We're SOC 2 Type II compliant, GDPR compliant, and offer on-premise deployment.
+                        Your code is encrypted at rest and in transit. We never train on your code without explicit permission.
+                    </p>
+                </details>
+
+                <details class="bg-gray-50 rounded-lg p-6 cursor-pointer">
+                    <summary class="font-bold text-xl">How long does setup take?</summary>
+                    <p class="mt-4 text-gray-700">
+                        5 minutes. Connect your GitHub account, select repositories, and start searching.
+                        Luna auto-indexes your code in the background.
+                    </p>
+                </details>
+
+                <details class="bg-gray-50 rounded-lg p-6 cursor-pointer">
+                    <summary class="font-bold text-xl">What if I don't like it?</summary>
+                    <p class="mt-4 text-gray-700">
+                        Cancel anytime, no questions asked. You can downgrade to the free tier and keep using Luna
+                        with 100 queries/month forever.
+                    </p>
+                </details>
+
+                <details class="bg-gray-50 rounded-lg p-6 cursor-pointer">
+                    <summary class="font-bold text-xl">Does it work with my tech stack?</summary>
+                    <p class="mt-4 text-gray-700">
+                        Yes. Luna works with any programming language, framework, or repository structure.
+                        We support GitHub, GitLab, and Bitbucket.
+                    </p>
+                </details>
+
+                <details class="bg-gray-50 rounded-lg p-6 cursor-pointer">
+                    <summary class="font-bold text-xl">How is this different from GitHub Copilot?</summary>
+                    <p class="mt-4 text-gray-700">
+                        Copilot completes code as you type. Luna searches your entire codebase and answers questions
+                        instantly. They're complementary: use Copilot for writing code, Luna for understanding it.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="waitlist" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-luna-purple to-luna-orange text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                Stop Wasting Time.<br>Start Finding Answers.
+            </h2>
+            <p class="text-xl mb-8 opacity-90">
+                Join 1,247 developers who already save 20 hours/month with Luna.
+            </p>
+
+            <form class="max-w-md mx-auto">
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                        class="flex-1 px-6 py-4 rounded-lg text-gray-900 focus:outline-none focus:ring-4 focus:ring-white/50"
+                        required
+                    >
+                    <button
+                        type="submit"
+                        class="bg-white text-luna-purple px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition whitespace-nowrap"
+                    >
+                        Start Free Trial →
+                    </button>
+                </div>
+                <p class="mt-4 text-sm opacity-75">
+                    No credit card required. 100 queries/month free forever.
+                </p>
+            </form>
+
+            <div class="mt-8">
+                <a href="#" class="text-white underline opacity-75 hover:opacity-100">
+                    Or join beta waitlist (get Pro free for life)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="text-2xl font-bold bg-gradient-to-r from-luna-purple to-luna-orange bg-clip-text text-transparent mb-4">
+                        Luna Agents
+                    </div>
+                    <p class="text-sm">
+                        Stop wasting 3 hours searching code.<br>Get answers in 30 seconds.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Product</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#features" class="hover:text-white transition">Features</a></li>
+                        <li><a href="#pricing" class="hover:text-white transition">Pricing</a></li>
+                        <li><a href="https://docs.luna-agents.dev" class="hover:text-white transition">Documentation</a></li>
+                        <li><a href="#" class="hover:text-white transition">Changelog</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition">About</a></li>
+                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm">
+                    © 2026 Luna Agents. All rights reserved.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="https://twitter.com/lunaagentsai" class="hover:text-white transition">Twitter</a>
+                    <a href="https://linkedin.com/company/luna-agents" class="hover:text-white transition">LinkedIn</a>
+                    <a href="https://github.com/luna-agents" class="hover:text-white transition">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple Form Handler -->
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+
+            // TODO: Connect to actual backend/email service
+            alert('Thank you! We\'ll send you early access info to ' + email);
+
+            // Track with analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'signup', {
+                    'event_category': 'engagement',
+                    'event_label': 'waitlist'
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

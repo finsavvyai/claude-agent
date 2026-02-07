@@ -1,0 +1,56 @@
+# Cloudflare Workers configuration for RAG API
+name = "luna-rag-api"
+main = "src/worker.ts"
+compatibility_date = "2024-01-15"
+compatibility_flags = ["nodejs_compat"]
+
+# Environment configuration
+[env.production]
+name = "luna-rag-api-prod"
+vars = { ENVIRONMENT = "production" }
+
+[env.staging]
+name = "luna-rag-api-staging"
+vars = { ENVIRONMENT = "staging" }
+
+# KV Namespaces for caching and storage
+[[kv_namespaces]]
+binding = "RAG_CACHE"
+id = "your-kv-namespace-id"
+preview_id = "your-preview-kv-namespace-id"
+
+[[kv_namespaces]]
+binding = "DOCUMENT_METADATA"
+id = "your-metadata-kv-namespace-id"
+preview_id = "your-preview-metadata-kv-namespace-id"
+
+# D1 Database (SQLite) for structured data
+[[d1_databases]]
+binding = "RAG_DB"
+database_name = "claude-rag-database"
+database_id = "your-d1-database-id"
+
+# Migrations for Durable Objects
+[[migrations]]
+tag = "v1"
+new_classes = ["RAGProcessor"]
+
+# Durable Objects for stateful RAG processing (will be added after basic deployment)
+# [[durable_objects.bindings]]
+# name = "RAG_PROCESSOR"
+# class_name = "RAGProcessor"
+
+# R2 Storage for document files
+[[r2_buckets]]
+binding = "DOCUMENT_STORAGE"
+bucket_name = "claude-rag-documents"
+
+# Queue for batch processing
+[[queues.producers]]
+binding = "RAG_QUEUE"
+queue = "rag-processing-queue"
+
+[[queues.consumers]]
+queue = "rag-processing-queue"
+max_batch_size = 10
+max_batch_timeout = 30

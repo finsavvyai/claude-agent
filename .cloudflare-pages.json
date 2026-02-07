@@ -1,0 +1,16 @@
+{
+  "project": "luna-agents-testing",
+  "production_branch": "main",
+  "deployment_url": "https://luna-agents-testing.pages.dev",
+  "preview_url": "https://257d45f0.luna-agents-testing.pages.dev",
+  "files_deployed": [
+    "testing-dashboard.html",
+    "TESTING_COMPLETION_SUMMARY.md",
+    "TESTING_AUTOMATION_GUIDE.md",
+    "QUICK_START_GUIDE.md",
+    "PRODUCTION_DEPLOYMENT_GUIDE.md",
+    "GO_TO_MARKET_STRATEGY.md"
+  ],
+  "deployment_date": "2026-01-03",
+  "status": "live"
+}

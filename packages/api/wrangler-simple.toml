@@ -1,0 +1,20 @@
+# Simplified Cloudflare Workers configuration for RAG API
+name = "luna-rag-api"
+main = "src/worker-simple.ts"
+compatibility_date = "2024-01-15"
+compatibility_flags = ["nodejs_compat"]
+
+# Environment configuration
+[env.production]
+name = "luna-rag-api-prod"
+vars = { ENVIRONMENT = "production" }
+
+[env.staging]
+name = "luna-rag-api-staging"
+vars = { ENVIRONMENT = "staging" }
+
+# We'll add KV namespace after initial deployment
+# [[kv_namespaces]]
+# binding = "RAG_CACHE"
+# id = "your-kv-namespace-id"
+# preview_id = "your-preview-kv-namespace-id"
