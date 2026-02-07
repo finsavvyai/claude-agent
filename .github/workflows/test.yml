@@ -242,7 +242,7 @@ jobs:
 
     steps:
     - name: Download all test results
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v7
 
     - name: Comment PR with test results
       if: github.event_name == 'pull_request'
