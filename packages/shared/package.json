@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "@claude-agent/types": "workspace:*",
-    "zod": "^3.22.4",
+    "zod": "^4.3.6",
     "clsx": "^2.0.0",
     "date-fns": "^2.30.0"
   }
