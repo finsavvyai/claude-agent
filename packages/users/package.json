@@ -50,7 +50,7 @@
   "devDependencies": {
     "@types/node": "^20.11.17",
     "@types/bcrypt": "^5.0.2",
-    "@types/uuid": "^9.0.8",
+    "@types/uuid": "^11.0.0",
     "@types/lodash": "^4.14.202",
     "@types/mime-types": "^2.1.4",
     "@types/jest": "^29.5.12",
