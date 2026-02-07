@@ -42,6 +42,6 @@
     "@claude-agent/types": "workspace:*",
     "zod": "^3.22.4",
     "clsx": "^2.0.0",
-    "date-fns": "^2.30.0"
+    "date-fns": "^4.1.0"
   }
 }
