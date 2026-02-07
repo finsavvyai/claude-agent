@@ -48,7 +48,7 @@
     "@claude-agent/database": "workspace:*",
     "@claude-agent/cache": "workspace:*",
     "@claude-agent/messaging": "workspace:*",
-    "@prisma/client": "^5.7.0",
+    "@prisma/client": "^7.3.0",
     "uuid": "^9.0.1",
     "joi": "^17.11.0",
     "winston": "^3.12.0",
