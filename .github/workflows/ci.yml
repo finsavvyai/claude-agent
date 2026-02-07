@@ -98,7 +98,7 @@ jobs:
         run: npm ci
 
       - name: Download build artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v7
         with:
           name: build-artifacts
 
@@ -157,7 +157,7 @@ jobs:
         run: npm ci
 
       - name: Download build artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v7
         with:
           name: build-artifacts
 
@@ -203,7 +203,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Download build artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v7
         with:
           name: build-artifacts
 
@@ -238,7 +238,7 @@ jobs:
         run: npm ci
 
       - name: Download all test results
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v7
 
       - name: Check test results
         run: |
@@ -287,7 +287,7 @@ jobs:
         run: npm ci
 
       - name: Download build artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v7
         with:
           name: build-artifacts
 

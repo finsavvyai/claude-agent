@@ -246,7 +246,7 @@ jobs:
           fetch-depth: 0
 
       - name: Download performance results
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v7
         with:
           name: lighthouse-results
           path: performance-results/
